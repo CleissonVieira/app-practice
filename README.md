@@ -1,13 +1,10 @@
 <p align="center">
-    <img width="600" src=".github/logo.png" title="Logo do projeto"><br />
-</p>
-
-# Practice Chapecó
-
-<p align="left">
+    <img width="600" src=".github/logo.png" title="Logo do projeto"><br /><br />
     <img src="https://img.shields.io/maintenance/yes/2020?style=for-the-badge" title="Status do projeto">
-    <img src="https://img.shields.io/github/workflow/status/grintex/app-covid/Main?label=Build&logo=github&logoColor=white&style=for-the-badge" title="Status do build">
+    <img src="https://img.shields.io/github/workflow/status/ccuffs/template/ci.uffs.cc?label=Build&logo=github&logoColor=white&style=for-the-badge" title="Status do build">
 </p>
+
+# App PRACTICE
 
 Esse repositório contém o código-fonte do aplicativo móvel *PRACTICE*.
 
@@ -22,22 +19,23 @@ Como objetivo principal, o PRACTICE busca estruturar ambientes, capacitar agente
 **Coordenação:**
 * Fernando Bevilacqua - _Professor Ciência da Computação, UFFS Chapecó/SC - [fernando.bevilacqua@uffs.edu.br](mailto:fernando.bevilacqua@uffs.edu.br)_
 
-**Equipe de criação e desenvolvimento:**
+**[Equipe de desenvolvimento](https://github.com/orgs/practice-uffs/teams/dev):**
 
-* [Andrew M. Silva](https://github.com/andrewmsilva) (Ciência da Computação, UFFS Chapecó/SC)
-* [Cleisson Vieira Raimundi](https://github.com/CleissonVieira) (Ciência da Computação, UFFS Chapecó/SC)
-* [Estela Vilas Boas](https://github.com/estelavilasboas) (Ciência da Computação, UFFS Chapecó/SC)
-* [Jean Carlo Hilger](https://github.com/JeanCHilger) (Ciência da Computação, UFFS Chapecó/SC)
-* [Junior Vitor Ramisch](https://github.com/arufonsekun) (Ciência da Computação, UFFS Chapecó/SC)
+
+* [Andrew M. Silva](https://github.com/andrewmsilva)
+* [Cleisson Vieira Raimundi](https://github.com/CleissonVieira)
+* [Estela Vilas Boas](https://github.com/estelavilasboas)
+* [Jean Carlo Hilger](https://github.com/JeanCHilger)
+* [Junior Vitor Ramisch](https://github.com/arufonsekun)
 
 **Suporte:**
-* [Programa de Inovação PRACTICE](https://practice.uffs.cc/) (UFFS Chapecó/SC)
+* [Equipe PRACTICE](https://practice.uffs.cc/)
 
 ## Informações para desenvolvedores
 
 ### 1. Pré-requisitos
 
-Você precisa ter o node versão `>=13.8` instalado no seu sistema. Depois, rode:
+Você precisa ter [NodeJS](https://nodejs.org/en/) versão `>=13.8` instalado no seu sistema. Depois, rode:
 
 ```
 npm i framework7-cli cordova -g
@@ -45,19 +43,20 @@ npm i framework7-cli cordova -g
 
 ### 2. Preparar o projeto
 
-Clone o projeto:
+Faça um `fork` deste repositório em seu próprio GitHub e clone seu `fork` em seu computador:
 
 ```
-git clone https://github.com/practice-uffs/app-practice && cd app-practice
+git clone https://github.com/SEU_USUARIO/app-practice && cd app-practice
 ```
 
-Instale todas as dependências
+Mude para o branch `dev` e instale todas as dependências:
 
 ```
+git checkout dev
 npm install
 ```
 
-### 3. Teste
+### 3. Testar
 
 Para testar o projeto localmente, rode:
 
