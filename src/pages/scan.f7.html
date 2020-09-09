@@ -5,7 +5,7 @@
 
         <div class="col-100 tablet-50" style="background-color: #969ea7; height: 360px;">
 
-          <!-- <div id="reader" width="600px"></div> -->
+          <div id="reader" width="600px"></div>
 
           <div class="fab fab-right-bottom color-white" style="margin-bottom: 170px;">
             <a href="#">
@@ -36,29 +36,34 @@
 </template>
 
 
-<!-- <script src="./minified/html5-qrcode.js"></script> -->
+<!-- <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script>
+<script src="../js/html5-qrcode.min.js"></script>
+<script src="html5-qrcode.min.js"></script> -->
+
 <script>
+  // import Html5QrcodeScanner from "../js/html5-qrcode.min.js"
+  import Html5QrcodeScanner from "html5-qr-code.min.js"
   export default {
-    // methods: {
+    methods: {
 
-    //   onScanSuccess: function(qrMessage) {
-    //     console.log(`QR matched = ${qrMessage}`);
-    //   },
-    //   onScanFailure: function(error) {
-    //     console.warn(`QR error = ${error}`);
-    //   }
+      onScanSuccess: function(qrMessage) {
+        console.log(`QR matched = ${qrMessage}`);
+      },
+      onScanFailure: function(error) {
+        console.warn(`QR error = ${error}`);
+      }
 
-    // },
-    // on: {
-    //   tabInit: function(e, page) {
-    //     console.log("teste")
+    },
+    on: {
+      tabInit: function(e, page) {
+        console.log("teste")
 
-    //     let html5QrcodeScanner = new Html5QrcodeScanner(
-    //       "qrCode", { fps: 10, qrbox: 250 }, /* verbose= */ true);
-    //     html5QrcodeScanner.render(this.onScanSuccess(), this.onScanFailure());
+        let html5QrcodeScanner = new Html5QrcodeScanner(
+          "reader", { fps: 10, qrbox: 250 }, /* verbose= */ true);
+        html5QrcodeScanner.render(this.onScanSuccess(), this.onScanFailure());
 
-    //     console.log("teste2")
-    //   },
-    // }
+        console.log("teste2")
+      },
+    }
   };
 </script>
