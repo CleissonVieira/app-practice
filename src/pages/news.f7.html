@@ -1,0 +1,53 @@
+<template>
+  <div data-name="news">
+
+    {{#each services}}
+      <div class="card list demo-facebook-card list margin-bottom">
+        <a href="/news/{{this.id}}/" class="item-link new">
+          <div class="row card-header">
+            <div class="demo-facebook-avatar col-20"><img src="{{this.pictureProfile}}" width="50" height="50"/></div>
+            <div class="row col-80">
+              <div class="item-title col-100 tablet-50">{{this.author}}</div>
+              <div class="item-text">{{this.date}}</div>
+            </div>
+          </div>
+          <div class="card-content card-content-padding">
+            <p class="item-subtitle">{{this.description}}</p>
+            <img src="{{this.picture}}" width="100%"/>
+          </div>
+        </a>
+      </div>
+    {{/each}}
+
+  </div>
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        news: null,
+      }
+    },
+    methods: {
+      loadNews: function () {
+        var self = this;
+        var app = self.$app;
+
+        app.request.json('../static/example-data/news.json', function (data) {
+          // Sleeping only to show loading effects
+          setTimeout(function () {
+            // Setting services
+            self.$setState({
+              services: data,
+            });
+          }, 100);
+        });
+      }
+    },
+    on: {
+      tabInit: function(e, page) {
+        this.loadNews();
+      }
+    }
+  };
+</script>
