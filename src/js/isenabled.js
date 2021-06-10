@@ -1,6 +1,6 @@
 /**
  * Controls if a certain feature is enabled (or not) in the app.
- * 
+ *
  * @author Fernando Bevilacqua <dovyski@gmail.com>
  * @license MIT
  */
@@ -13,7 +13,7 @@ var IsEnabled = {
     chatsPage: false,
     chatPage: false,
 
-    scanPage: false,
+    scanPage: true,
 
     envPage: false,
 
@@ -21,8 +21,7 @@ var IsEnabled = {
     scores: false,
     achievements: false,
 
-    servicesPage: false,
-    servicePage: false,
+    servicesPage: true,
 
     rightPanel: true,
 
@@ -33,6 +32,8 @@ var IsEnabled = {
     notificationsPage: false,
 
     settingsPage: true,
+
+    taskCompletedPage: false,
 
     aboutPage: true,
     recordAudioPage: true,
